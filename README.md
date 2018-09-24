@@ -1,0 +1,11 @@
+1. 常用居中方法
+* 水平居中
+* 垂直居中
+2. 单列布局
+3. 二列&三列布局
+* float+margin
+* position+margin
+* 圣杯布局（float+负margin）
+* 双飞翼布局（float+负margin）
+* flex布局
+4. 总结

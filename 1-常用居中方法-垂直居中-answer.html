@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用居中方法</title>
+
+    <style>
+        /* 子元素为单行内联元素 */
+         .parent-1 {
+            width: 800px;
+            height: 600px;
+            line-height: 600px;
+            border: 1px solid;
+        }
+        .child-1 {
+            display: inline;
+            border: 1px solid;
+        }
+
+         /* 子元素为多行内联元素 */
+         .parent-2 {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .child-2 {
+            border: 1px solid;
+        }
+
+          /* 子元素为块级元素 */
+          .parent-3 {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+            position: relative;
+        }
+        .child-3 {
+            border: 1px solid;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 400px;
+            height: 500px;
+        }
+
+          /* 子元素为块级元素 */
+          .parent-4 {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+        }
+        .child-4 {
+            border: 1px solid;
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent-1">
+        <div class="child-1">子元素为单行内联元素</div>
+    </div>
+
+    <div class="parent-2">
+        <div class="child-2">子元素多行内联元素,子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素子元素多行内联元素</div>
+    </div>
+
+    <div class="parent-3">
+        <div class="child-3">
+            块级元素
+        </div>
+    </div>
+
+    <div class="parent-4">
+            <div class="child-4">
+                flex
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用居中方法</title>
+    <style>
+        /* 子元素要在父元素居中 */
+    /* 1. 子元素为 行内元素 或是 不定宽块级元素*/
+        .parent-1 {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+        }
+        .child-1 {
+            border: 1px solid;
+        }
+        .child-1 {
+            display: inline;
+        }
+         .parent-1 {
+             text-align: center;
+         }
+
+    /* 2. 子元素为 定宽块状元素 */
+        .parent-2 {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+        }
+        .child-2 {
+            display: block;
+            width: 400px;
+            border: 1px solid;
+        }
+        .child-2 {
+        margin: 0 auto;
+        }
+
+    /* 3 通用方案 */
+        .parent-3 {
+            width: 800px;
+            height: 600px;
+            border: 1px solid;
+        }
+        .child-3 {
+             width: 400px;
+             border: 1px solid;
+        }
+        .parent-3 {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="parent-1">
+        <div class="child-1">子元素</div>
+    </div>
+    <div class="parent-2">
+        <div class="child-2">子元素</div>
+    </div>
+
+    <div class="parent-3">
+        <div class="child-3">子元素</div>
+    </div>
+    
+</body>
+</html>
