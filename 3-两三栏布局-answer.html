@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* before */
+    div {
+        border: 1px solid;
+    }
+    .content-1 {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* float + margin  
+    1. 注意顺序，先写两侧栏，再写主面板
+    2. 缺点：先渲染了侧边栏，而不是重要的主面板
+    
+    */
+    .sub-1 {
+        width: 100px;
+        height: 800px;
+        float: left;
+    }
+
+    /* 
+    两栏：去掉对应的侧栏,中间对应的margin
+    */
+    .extra-1 {
+        width: 200px;
+        height: 800px;
+        float: right;
+    }
+    /* 
+    子元素自动充满父元素
+    普通文档流中块级元素独占一行
+     */
+    .main-1 {
+        height: 800px;
+        margin-left: 100px;
+        background-color: aqua;
+        margin-right: 200px;
+    }
+
+    /* position + margin */
+    .content-2 {
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .sub-2, .extra-2 {
+        position: absolute;
+        width: 200px;
+        top: 0;
+    }
+
+    .sub-2 {
+        left: 0;
+        height: 800px;
+    }
+    .extra-2 {
+        right: 0;
+        height: 800px;
+    }
+    .main-2 {
+        margin: 0 200px;
+        height: 800px;
+    }
+</style>
+<body>
+    
+    <div class="content-1">
+            
+        <div class="sub-1">
+            左侧
+        </div>
+       
+    
+        <div class="extra-1">
+            右侧
+        </div>
+
+        <div class="main-1">
+                中间
+            </div>
+    
+    </div>
+
+    <div class="content-2">
+        <div class="sub-2">
+                左侧
+            </div>
+            <div class="main-2">
+                    中间
+                </div>
+        
+            <div class="extra-2">
+                右侧
+            </div>
+    
+           
+    </div> 
+   
+</body>
+</html>
