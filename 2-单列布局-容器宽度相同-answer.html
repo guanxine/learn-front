@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        div {
+            border: 1px solid;
+        }
+
+        .layout {
+            /* width: 960px;  */ /*当浏览器窗口的宽度小于960px时,单列布局不会自适应 */
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .header {
+            height: 60px;
+        }
+        .content {
+            height: 800px;
+        }
+        .footer {
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 定宽,水平居中 -->
+      <!-- 
+        1. header,content,footer 宽度相同,一般不会占满浏览器的最宽宽度,但当浏览器宽度小于其最大宽度时,宽度自适应.
+   
+    -->
+
+    <div class="layout">
+        <div class="header"></div>
+        <div class="content"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
